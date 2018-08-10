@@ -6,11 +6,11 @@ If you still don't know what HMVC is, please move to Wikipedia first:
 [http://en.wikipedia.org/wiki/HMVC](http://en.wikipedia.org/wiki/HMVC)
 
 
-一I have always felt that CodeIgniter lacks a good HMVC architecture, and I personally think that several current HMVC third-party libraries are not very good. Some have to modify the source code of CI, and some have to introduce new syntax. This is not my favorite. Way, so I thought about a plan myself, I hope that you can give us valuable advice. The feature of this HMVC is that it does not modify the CI source code, does not introduce a new syntax, and is fully utilizing the powerful extension mechanism of CI.
+I have always felt that CodeIgniter lacks a good HMVC architecture, and I personally think that several current HMVC third-party libraries are not very good. Some have to modify the source code of CI, and some have to introduce new syntax. This is not my favorite. Way, so I thought about a plan myself, I hope that you can give us valuable advice. The feature of this HMVC is that it does not modify the CI source code, does not introduce a new syntax, and is fully utilizing the powerful extension mechanism of CI.
 
-The current extension is to add the modules directory in the application directory, each module has its own directory, and the module can have a subdirectory, such as `application/modules/目录/模块名/....`
+The current extension is to add the modules directory in the application directory, each module has its own directory, and the module can have a subdirectory, such as `application/modules/Directory/module_name/....`
 
-Each module has its own MVC architecture, such as `application/modules/模块名/controllers`，`application/modules/模块名/models`，`application/modules/模块名/views` the load module in view:
+Each module has its own MVC architecture, such as `application/modules/module_name/controllers`，`application/modules/module_name/models`，`application/modules/module_name/views` the load module in view:
 
 ```php
 $this->load->module('module_name/controller/method');
